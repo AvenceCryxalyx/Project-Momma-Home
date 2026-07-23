@@ -1,0 +1,57 @@
+using UnityEngine.InputSystem;
+using UnityEngine;
+
+public class InteractionController : MonoBehaviour
+{
+    [SerializeField] private Camera playerCamera;
+    [SerializeField, Range(3f, 10f)] private float hitrange = 3f;
+    [SerializeField] private LayerMask layerMask;
+
+    private RaycastHit hit;
+    private IInteractable currentTargetInteractable;
+    Ray ray;
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if(currentTargetInteractable != null)
+        {
+            currentTargetInteractable.Interact(this);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, hitrange, layerMask))
+        {
+            if (hit.collider.GetComponent<IInteractable>() != null)
+            {
+                IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+                if (currentTargetInteractable == interactable)
+                {
+                    return;
+                }
+                    if (interactable.IsInteractable(this) && currentTargetInteractable != interactable)
+                {
+                    currentTargetInteractable = interactable;
+                    InteractableText.instance.SetText(currentTargetInteractable.InteractionText());
+                    InteractableText.instance.SetVisibility(true);
+                }
+            }
+            else if(currentTargetInteractable != null)
+            {
+                currentTargetInteractable = null;
+                InteractableText.instance.SetVisibility(false);
+            }
+        }
+        else if(currentTargetInteractable != null)
+        {
+            currentTargetInteractable = null;
+            InteractableText.instance.SetVisibility(false);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(playerCamera.transform.position, playerCamera.transform.forward);
+    }
+}
