@@ -34,7 +34,7 @@ public class DropoffReceiver : MonoBehaviour, IInteractable
 
     public string InteractionText()
     {
-        return "Add to Pot [E]";
+        return "Add to Pot [Left Click]";
     }
 
     public bool IsInteractable(InteractionController interactor)

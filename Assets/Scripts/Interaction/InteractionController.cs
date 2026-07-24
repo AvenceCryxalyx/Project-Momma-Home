@@ -33,20 +33,19 @@ public class InteractionController : MonoBehaviour
                     if (interactable.IsInteractable(this) && currentTargetInteractable != interactable)
                 {
                     currentTargetInteractable = interactable;
-                    InteractableText.instance.SetText(currentTargetInteractable.InteractionText());
-                    InteractableText.instance.SetVisibility(true);
+                    ReticleUIController.instance.UpdateReticle(interactable);
                 }
             }
             else if(currentTargetInteractable != null)
             {
                 currentTargetInteractable = null;
-                InteractableText.instance.SetVisibility(false);
+                ReticleUIController.instance.ClearReticle();
             }
         }
         else if(currentTargetInteractable != null)
         {
             currentTargetInteractable = null;
-            InteractableText.instance.SetVisibility(false);
+            ReticleUIController.instance.ClearReticle();
         }
     }
 

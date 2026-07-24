@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,7 @@ public class Ingredient : PickupableObject
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private Transform groundChecker;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private SpriteRenderer wings;
     public string Name { get; private set; }
 
     private PickupableObject pickUp;
@@ -22,11 +24,11 @@ public class Ingredient : PickupableObject
         {
             Initialize(so);
         }
+
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         pickUp = GetComponent<PickupableObject>();
 
         pickUp.EvtInteracted.AddListener(OnInteractable);
-        //animator = GetComponent<Animator>();
     }
 
     public void Initialize(IngredientSO so)
@@ -69,5 +71,21 @@ public class Ingredient : PickupableObject
     private void OnDrop(PickupableObject obj)
     {
         GetComponent<Rigidbody>().detectCollisions = true;
+    }
+
+    public void OnSpawned(Spawn spawn)
+    {
+
+    }
+
+    public void OnExpired(Spawn spawn)
+    {
+        wings.gameObject.SetActive(true);
+    }
+
+    public void OnDespawned(Spawn spawn)
+    {
+        wings.gameObject.SetActive(false);
+        gameObject.PoolOrDestroy();
     }
 }
