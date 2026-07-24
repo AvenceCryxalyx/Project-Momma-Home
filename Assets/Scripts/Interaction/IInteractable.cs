@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
-public class InteractedEvent : UnityEvent<IInteractable> { }
+
+[System.Serializable]
+public class InteractedEvent : UnityEvent<InteractionController> { }
 
 public interface IInteractable
 {
