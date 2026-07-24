@@ -29,7 +29,7 @@ public class PickupHandler : MonoBehaviour
 
     public void OnDrop(InputAction.CallbackContext context)
     {
-        if (CurrentObject != null)
+        if (CurrentObject != null && context.performed)
         {
             CurrentObject.Drop();
         }

@@ -27,7 +27,7 @@ public class MovementController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if(isGrounded)
+        if(isGrounded && context.performed)
             velocity.y = Mathf.Sqrt(Jumpheight * -2 * gravity);
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum GameState
 {
@@ -8,9 +9,12 @@ public enum GameState
     GameOver,
 }
 
-public class GameStateManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static GameStateManager instance;
+    public static GameManager instance;
+    [SerializeField] private GameObject player;
+
+    public GameObject Player { get { return player; } }
 
     public GameState CurrentState { get; private set; }
 
@@ -19,6 +23,10 @@ public class GameStateManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+        }
+        if(player == null)
+        {
+            player = FindFirstObjectByType<PlayerInput>().gameObject;
         }
         DontDestroyOnLoad(this);
     }

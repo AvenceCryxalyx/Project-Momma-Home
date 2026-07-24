@@ -13,7 +13,7 @@ public class InteractionController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if(currentTargetInteractable != null)
+        if(context.performed && currentTargetInteractable != null)
         {
             currentTargetInteractable.Interact(this);
         }

@@ -17,7 +17,7 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameStateManager.instance.CurrentState != GameState.Playing)
+        if (GameManager.instance.CurrentState != GameState.Playing)
             return;
 
         timeElapsed += Time.deltaTime;
