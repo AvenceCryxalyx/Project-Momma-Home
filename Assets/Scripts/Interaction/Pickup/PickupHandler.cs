@@ -19,6 +19,7 @@ public class PickupHandler : MonoBehaviour
         if(target != null)
         {
             target.DropOff(CurrentObject);
+            CurrentObject = null;
         }
         else
         {
