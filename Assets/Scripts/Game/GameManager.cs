@@ -7,6 +7,7 @@ public enum GameState
     Playing,
     Paused,
     GameOver,
+    GameFinished
 }
 
 public class GameManager : MonoBehaviour
@@ -49,6 +50,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         CurrentState = GameState.GameOver;
+    }
+
+    public void GameFinished()
+    {
+        CurrentState = GameState.GameFinished;
     }
 
     public void BackToMainMenu()

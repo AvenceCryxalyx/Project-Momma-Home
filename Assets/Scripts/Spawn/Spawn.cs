@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
-
+[System.Serializable]
 public class Spawned : UnityEvent<Spawn> { }
+[System.Serializable]
 public class Expired : UnityEvent<Spawn> { }
+[System.Serializable]
 public class Despawn : UnityEvent<Spawn> { }
 
 public class Spawn :  Poolable
@@ -56,5 +58,10 @@ public class Spawn :  Poolable
         }
 
         timeElapsed += Time.deltaTime;
+
+        if(timeElapsed > LifeTime)
+        {
+            timeElapsed = 0;
+        }
     }
 }
