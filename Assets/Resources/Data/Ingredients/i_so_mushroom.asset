@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_mushroom
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: 8e3aa94b2fa151f47bd6747f25398fce, type: 3}
+  Image: {fileID: 21300000, guid: 28bfe380c7fbff647b4a85339abd5125, type: 3}
   Name: Mushroom

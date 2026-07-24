@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_rice
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: b632252ccac63fb45a8990ddb1422ba8, type: 3}
+  Image: {fileID: 21300000, guid: 9dfc90a0d381d6646b14877f97996f3d, type: 3}
   Name: Rice
