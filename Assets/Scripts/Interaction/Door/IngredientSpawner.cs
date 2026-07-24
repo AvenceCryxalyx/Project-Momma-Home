@@ -63,7 +63,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
         {
             PickupableObject pick = IngredientManager.instance.GetIngredient(spawn);
             pick.transform.position = SpawnPoint.transform.position;
-            pick.GetComponent<Rigidbody>().AddForce((baseDirection + spawnLaunchParameters.GetRandomLaunchForce()) * baseForce);
+            pick.GetComponent<Rigidbody>().AddForce(((transform.forward + baseDirection) + spawnLaunchParameters.GetRandomLaunchForce()) * baseForce);
         }
     }
 
