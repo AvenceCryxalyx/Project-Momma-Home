@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_Lettuce
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: def34cdef4b85af41846a5a60fcf6f00, type: 3}
+  Image: {fileID: 21300000, guid: 1b838fce5183ec54091480d61f8a55bb, type: 3}
   Name: Lettuce
