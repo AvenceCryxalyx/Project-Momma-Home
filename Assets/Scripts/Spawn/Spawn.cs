@@ -18,7 +18,7 @@ public class Spawn :  Poolable
     public bool IsAlive { get; private set; }
 
     private float timeElapsed = 0f;
-    public void Setup(float lifeTime)
+    public void Setup(float lifeTime = 10f)
     {
         LifeTime = lifeTime;
     }
@@ -52,7 +52,7 @@ public class Spawn :  Poolable
 
     public void Update()
     {
-        if (!IsAlive)
+        if (!IsAlive || LifeTime == 0)
         {
             return;
         }
@@ -61,6 +61,7 @@ public class Spawn :  Poolable
 
         if(timeElapsed > LifeTime)
         {
+            OnExpired();
             timeElapsed = 0;
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,9 +10,11 @@ public class Ingredient : PickupableObject
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private Transform groundChecker;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private ParticleSystem godrays;
     [SerializeField] private SpriteRenderer wings;
     public string Name { get; private set; }
 
+    private Coroutine ExpiredCor;
     private PickupableObject pickUp;
     private SpriteRenderer spriteRend;
     private CharacterController characterController;
@@ -51,6 +54,8 @@ public class Ingredient : PickupableObject
             spriteRend.transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
 
         isGrounded = Physics.CheckSphere(groundChecker.position, groundDistance, groundMask);
+        if (GameManager.instance == null)
+            return;
 
         if (GameManager.instance.Player == null || !isGrounded)
             return;
@@ -75,17 +80,41 @@ public class Ingredient : PickupableObject
 
     public void OnSpawned(Spawn spawn)
     {
-
+        GetComponent<Rigidbody>().useGravity = true;
     }
 
     public void OnExpired(Spawn spawn)
     {
-        wings.gameObject.SetActive(true);
+        ExpiredCor = StartCoroutine(OnExpiredTask(spawn));
     }
 
     public void OnDespawned(Spawn spawn)
     {
-        wings.gameObject.SetActive(false);
+        if (wings != null)
+        {
+            wings.gameObject.SetActive(false);
+        }
+        if (godrays != null)
+        {
+            godrays.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+        }
+        StopAllCoroutines();
+        ExpiredCor = null;
         gameObject.PoolOrDestroy();
+    }
+
+    private IEnumerator OnExpiredTask(Spawn spawn)
+    {
+        if (wings != null)
+        {
+            wings.gameObject.SetActive(true);
+        }
+        if (godrays != null)
+        {
+            godrays.Play();
+        }
+        GetComponent<Rigidbody>().useGravity = false;
+        yield return new WaitForSeconds(2);
+        spawn.OnDespawn();
     }
 }

@@ -6,6 +6,8 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
     [SerializeField] private GameObject GameOverObject;
     private void Update()
     {
+        if (GameManager.instance == null)
+            return;
         if(TimeManager.instance.TimeRemaining <= 0 && GameManager.instance.CurrentState == GameState.Playing)
         {
             GameManager.instance.GameOver();

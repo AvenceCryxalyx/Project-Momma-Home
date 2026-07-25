@@ -22,6 +22,9 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance == null)
+            return;
+
         if (GameManager.instance.CurrentState != GameState.Playing)
             return;
 
