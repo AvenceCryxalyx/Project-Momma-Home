@@ -26,6 +26,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
         }
     }
 
+    public WeightedGachaSO weights;
     [SerializeField] private IngredientSpawnerSO so;
     [SerializeField] private Transform SpawnPoint;
     [SerializeField] private InteractedEvent _evtInteracted;
@@ -37,7 +38,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
     {
         if(so)
         {
-            spawnGacha = new Gacha(so.weights.Infos);
+            spawnGacha = new Gacha(weights.Infos);
             this.spawnAmount = Random.Range(1, 5);
         }
         if(SpawnPoint == null)
