@@ -21,7 +21,3 @@ MonoBehaviour:
     weight: 40
   - id: Meat
     weight: 20
-  - id: Lettuce
-    weight: 100
-  - id: Egg
-    weight: 500

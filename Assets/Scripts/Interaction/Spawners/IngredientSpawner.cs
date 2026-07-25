@@ -44,7 +44,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
         if(so)
         {
             spawnGacha = new Gacha(weights.Infos);
-            this.spawnAmount = Random.Range(1, weights.Infos.Length);
+            this.spawnAmount = Random.Range(so.maxSpawnAmount, so.maxSpawnAmount);
         }
         if(SpawnPoint == null)
         {

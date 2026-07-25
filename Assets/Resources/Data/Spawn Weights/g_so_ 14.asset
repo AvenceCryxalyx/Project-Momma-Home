@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Infos:
   - id: Rice
-    weight: 300
+    weight: 100
   - id: Mushroom
-    weight: 100
+    weight: 10
   - id: Tofu
-    weight: 40
-  - id: Meat
-    weight: 20
-  - id: Lettuce
     weight: 100
+  - id: Meat
+    weight: 40
+  - id: Lettuce
+    weight: 10
   - id: Egg
-    weight: 500
+    weight: 40
