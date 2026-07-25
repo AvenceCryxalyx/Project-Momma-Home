@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class TmpTextTransition : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class TmpTextTransition : MonoBehaviour
     [HideInInspector]
     public Vector3[] originalPositions;
 
-    void Start()
+    void Awake()
     {
         originalPositions = new Vector3[textMeshes.Length];
         for (int i = 0; i < textMeshes.Length; i++)
@@ -31,7 +32,7 @@ public class TmpTextTransition : MonoBehaviour
         HideAll();
     }
 
-    public void PlaySequencedEnterFromCenterBottom(int index)
+    public void PlaySequencedEnterFromCenterBottom(int index = 0)
     {
         if (textMeshes[index] == null)
             return;
@@ -39,7 +40,7 @@ public class TmpTextTransition : MonoBehaviour
         playTransition(textMeshes[index], enterFromCenterBottom(textMeshes[index], sequenceDuration(index) / totalGroupDuration, lingerDuration));
     }
 
-    public void PlaySequencedPopEmUp(int index)
+    public void PlaySequencedPopEmUp(int index = 0)
     {
         if (textMeshes[index] == null)
             return;
@@ -171,12 +172,15 @@ public class TmpTextTransition : MonoBehaviour
         }
         //============
         yield return new WaitForSeconds(lingerDuration);
-        if (autoExit)
+        if (autoExit && lingerDuration >= 0)
         {
             yield return popUp(subject, 0, 0, reverse: true, cleanup: false, autoExit: false);
         }
 
-        cleanUp(subject);
+        if (lingerDuration >= 0)
+        {
+            cleanUp(subject);
+        }
     }
 
     IEnumerator popUp(TMP_Text subject, float startDelay, float lingerDuration, bool reverse = false, bool cleanup = true, bool autoExit = true)
@@ -220,13 +224,13 @@ public class TmpTextTransition : MonoBehaviour
         {
             yield return new WaitForSeconds(lingerDuration);
         }
-        if (autoExit)
+        if (autoExit && lingerDuration >= 0)
         {
             yield return popUp(subject, 0, 0, !reverse, cleanup: cleanup, autoExit: false);
             yield break;
         }
 
-        if (cleanup)
+        if (cleanup && lingerDuration >= 0)
         {
             cleanUp(subject);
         }
