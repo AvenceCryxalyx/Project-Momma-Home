@@ -5,6 +5,6 @@ using static IngredientSpawner;
 public class IngredientSpawnerSO : ScriptableObject
 {
     public Vector3 BaseDirection = Vector3.up;
-    public float BaseForce = 100f;
+    public float BaseForce = 2f;
     public SpawnLaunchParameters SpawnLaunchParameters;
 }
