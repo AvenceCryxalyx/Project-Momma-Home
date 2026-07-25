@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: kitchenCabinetUpperDouble
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 936025c6d2b00534b9cd74677c1133af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
