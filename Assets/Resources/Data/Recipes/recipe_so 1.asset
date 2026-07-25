@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - so: {fileID: 11400000, guid: c908360849ecd74418c787084cfb768a, type: 2}
-    amount: 5
+    amount: 1
   - so: {fileID: 11400000, guid: 1f2c288d2015d274e8c25ff6b2457bca, type: 2}
-    amount: 5
+    amount: 1
   - so: {fileID: 11400000, guid: e67ec7d540b0fba4ea431a72e5d54633, type: 2}
-    amount: 5
+    amount: 1
   - so: {fileID: 11400000, guid: cea48292b2f3d5848b5e52736fc18843, type: 2}
-    amount: 5
+    amount: 1

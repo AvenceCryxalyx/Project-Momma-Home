@@ -52,7 +52,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
         }
         if(animator ==  null)
         {
-            animator = GetComponent<Animator>();
+            animator = GetComponentInParent<Animator>();
         }
     }
 

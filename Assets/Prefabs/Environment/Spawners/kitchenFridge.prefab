@@ -25,14 +25,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206540166136090232}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99999994, z: -0, w: -0.0005398989}
+  m_LocalRotation: {x: 0, y: -0.9999999, z: 0, w: 0.00054106896}
   m_LocalPosition: {x: -22.808006, y: -6.4276605, z: -7.1679735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6543289487102290768}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.938, z: 0}
 --- !u!95 &5258433083538508270
 Animator:
   serializedVersion: 7
@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 7062964532599167721}
   - component: {fileID: 4397202011725558510}
   - component: {fileID: 7912056318916922575}
-  - component: {fileID: 5297907525335086735}
   m_Layer: 8
   m_Name: kitchenFridge
   m_TagString: Untagged
@@ -290,34 +289,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebec122be75db524aaca841d18df5082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weights: {fileID: 11400000, guid: f9f508e7af2361e4db59a4d61ce73928, type: 2}
+  weights: {fileID: 11400000, guid: 55e31c90ff22f484d908447dd0c45280, type: 2}
   so: {fileID: 11400000, guid: e848fd5e8b3840d448d752cb967c1b0f, type: 2}
   SpawnPoint: {fileID: 671440323321488188}
   _evtInteracted:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &5297907525335086735
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2882749389591980151}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7577b36ea49ac440ba8b4677850dfb0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4052823448601767792
 GameObject:
   m_ObjectHideFlags: 0

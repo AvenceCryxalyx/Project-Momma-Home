@@ -25,14 +25,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4040188365046767444}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70692915, z: -0, w: 0.70728445}
+  m_LocalRotation: {x: 0, y: 0.70692784, z: 0, w: 0.7072857}
   m_LocalPosition: {x: -7.9131813, y: -6.4276605, z: 15.062027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6041666403476167138}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.971, z: 0}
 --- !u!95 &4967328792750214204
 Animator:
   serializedVersion: 7
@@ -171,9 +171,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a05834f1fe25c7458891c06460ec8eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3505807156653519226}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a05834f1fe25c7458891c06460ec8eb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5846185012387288018}
     - targetCorrespondingSourceObject: {fileID: -8592100899719657442, guid: 6a05834f1fe25c7458891c06460ec8eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8426247091892316618}
@@ -221,34 +218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebec122be75db524aaca841d18df5082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weights: {fileID: 11400000, guid: aa492d21e38b2424183f51b90d1966e0, type: 2}
+  weights: {fileID: 11400000, guid: e54db3ff96289bd4ab23f7712856c191, type: 2}
   so: {fileID: 11400000, guid: a1fd8f7de7df0464fae4aa6bb90e5c6e, type: 2}
   SpawnPoint: {fileID: 5467509314786453711}
   _evtInteracted:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &5846185012387288018
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6382620168038351704}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6669918086281557527 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8592100899719657442, guid: 6a05834f1fe25c7458891c06460ec8eb, type: 3}
