@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class OnTheSpotHotpotGameCondition : MonoBehaviour
 {
-    [SerializeField] private GameObject GameOverObject;
+    [SerializeField] private GameOver GameOverObject;
     private void Update()
     {
         if (GameManager.instance == null)
@@ -11,7 +11,8 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
         if(TimeManager.instance.TimeRemaining <= 0 && GameManager.instance.CurrentState == GameState.Playing)
         {
             GameManager.instance.GameOver();
-            GameOverObject.SetActive(true);
+            GameOverObject.gameObject.SetActive(true);
+            GameOverObject.ShowEndScreen(false);
             GameManager.instance.Player.GetComponent<MovementController>().enabled = false;
             GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = false;
         }
@@ -19,7 +20,8 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
         if(GameManager.instance.CurrentState == GameState.Playing && RecipeManager.instance.IsComplete)
         {
             GameManager.instance.GameFinished();
-            GameOverObject.SetActive(true);
+            GameOverObject.gameObject.SetActive(true);
+            GameOverObject.ShowEndScreen(true);
             GameManager.instance.Player.GetComponent<MovementController>().enabled = false;
             GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = false;
         }
