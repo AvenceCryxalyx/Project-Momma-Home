@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 using Unity.Jobs;
+using System;
 
-public class Gacha
+public class Gacha : IDisposable
 {
     private NativeArray<float> cumulativeWeights;
     private NativeArray<int> itemIds;
@@ -13,6 +14,19 @@ public class Gacha
     public Gacha(WeightedInfo[] list)
     {
         InitializeGachaSystem(list);
+    }
+
+    public void Dispose()
+    {
+        if (cumulativeWeights.IsCreated)
+        {
+            cumulativeWeights.Dispose();
+        }
+        if (itemIds.IsCreated)
+        {
+            itemIds.Dispose();
+        }
+        isInitialized = false;
     }
 
     private void InitializeGachaSystem(WeightedInfo[] gachaList)

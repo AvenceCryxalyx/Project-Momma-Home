@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -12,10 +13,11 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private string MainMenuScene = "MainMenu";
+    [SerializeField] private string MainSceneName = "MainScene";
     public static GameManager instance;
-    [SerializeField] private GameObject player;
 
-    public GameObject Player { get { return player; } }
+    public GameObject Player { get; private set; }
 
     public GameState CurrentState { get; private set; }
 
@@ -25,16 +27,13 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        if(player == null)
-        {
-            player = FindFirstObjectByType<PlayerInput>().gameObject;
-        }
         DontDestroyOnLoad(this);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void StartGame()
     {
-        CurrentState = GameState.Playing;
+        SceneManager.LoadScene(MainSceneName, LoadSceneMode.Single);
     }
 
     public void PauseGame()
@@ -50,15 +49,30 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         CurrentState = GameState.GameOver;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void GameFinished()
     {
         CurrentState = GameState.GameFinished;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void BackToMainMenu()
     {
         CurrentState = GameState.Uninitialized;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name == MainSceneName)
+        {
+            if (Player == null)
+            {
+                Player = FindFirstObjectByType<PlayerInput>().gameObject;
+                CurrentState = GameState.Playing;
+            }
+        }
     }
 }
