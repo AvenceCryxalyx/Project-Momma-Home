@@ -7,12 +7,15 @@ public class PickupableObject : MonoBehaviour, IInteractable
     [SerializeField] private InteractedEvent _evtInteracted;
 
     public InteractedEvent EvtInteracted => _evtInteracted;
-
+    public virtual bool OverrideIsInteractable()
+    {
+        return true;
+    }
     public void Interact(InteractionController interactor)
     {
         if (_evtInteracted != null)
         {
-            _evtInteracted.Invoke(interactor);
+            _evtInteracted.Invoke(this,interactor);
         }
 
         if(interactor.GetComponent<PickupHandler>())
@@ -27,16 +30,12 @@ public class PickupableObject : MonoBehaviour, IInteractable
     {
         transform.parent = null;
         GetComponent<Rigidbody>().isKinematic = false;
-    }
-
-    public string InteractionText()
-    {
-        return "Pickup [Left click]";
+        GetComponent<Rigidbody>().useGravity = true;
     }
 
     public bool IsInteractable(InteractionController interactor)
     {
-        if(interactor.GetComponent<PickupHandler>().CurrentObject == null)
+        if(interactor.GetComponent<PickupHandler>().CurrentObject == null && OverrideIsInteractable())
             return true;
         return false;
     }

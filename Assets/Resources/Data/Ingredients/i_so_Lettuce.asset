@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_Lettuce
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: 1b838fce5183ec54091480d61f8a55bb, type: 3}
+  AliveSprite: {fileID: 21300000, guid: 1b838fce5183ec54091480d61f8a55bb, type: 3}
+  ExpiredSprite: {fileID: 21300000, guid: 8d1b14e8a0ae6c14f85d5f06b9971349, type: 3}
   Name: Lettuce

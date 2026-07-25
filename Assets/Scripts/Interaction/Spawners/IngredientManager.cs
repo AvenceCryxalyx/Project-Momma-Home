@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 public class IngredientManager : MonoBehaviour
@@ -6,9 +7,13 @@ public class IngredientManager : MonoBehaviour
     public static IngredientManager instance;
     public Ingredient Prefab;
 
-    [SerializeField]private List<IngredientSO> IngredientsList;
+    [SerializeField] private IngredientsGlobalSettings settings;
+    [SerializeField] private List<IngredientSO> IngredientsList;
+    [SerializeField] private int maxActiveIngredientsSpawners;
     private Dictionary<string, IngredientSO> Ingredients = new Dictionary<string, IngredientSO>();
     private PoolSourceController poolController;
+
+    private List<IngredientSpawner> activeSpawners = new List<IngredientSpawner>();
 
     private void Awake()
     {
@@ -30,6 +35,7 @@ public class IngredientManager : MonoBehaviour
         newPick.Initialize(Ingredients[name]);
         newPick.GetComponent<Rigidbody>().isKinematic = false;
         newPick.transform.parent = null;
+        newPick.GetComponent<Spawn>().Setup(settings.spawnLifeTime);
         return newPick;
     }
 }

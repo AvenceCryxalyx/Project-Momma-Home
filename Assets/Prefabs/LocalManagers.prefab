@@ -44,6 +44,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa99386f36345847b8e0a23afac7a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverObject: {fileID: 0}
+--- !u!1 &2475812738639902583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2328516115703258568}
+  - component: {fileID: 496286728023834937}
+  m_Layer: 0
+  m_Name: IngredientSpawnerActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2328516115703258568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475812738639902583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2961890043287571310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &496286728023834937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475812738639902583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9821b0b1a5fc6954996eed3da9246a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSpawners: []
+  maxActiveSpawners: 4
+  activationInterval: 5
+  firstToActivate: {fileID: 0}
 --- !u!1 &4063398028579271212
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +266,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2328516115703258568}
   m_Father: {fileID: 5890249233154626309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2860087479953343092
@@ -241,6 +291,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c908360849ecd74418c787084cfb768a, type: 2}
   - {fileID: 11400000, guid: cea48292b2f3d5848b5e52736fc18843, type: 2}
   - {fileID: 11400000, guid: 1f2c288d2015d274e8c25ff6b2457bca, type: 2}
+  maxActiveIngredientsSpawners: 0
 --- !u!114 &2981030840357365326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce682b0ee71611a4093108550c89c929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 0}
+  recipeReceiver: {fileID: 0}
+  uiController: {fileID: 0}
+  requirementsList: []
 --- !u!1 &8176497998125206412
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_rice
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: 9dfc90a0d381d6646b14877f97996f3d, type: 3}
+  AliveSprite: {fileID: 21300000, guid: 9dfc90a0d381d6646b14877f97996f3d, type: 3}
+  ExpiredSprite: {fileID: 21300000, guid: d36cc56d8c9638d49bed94df91dfc7d6, type: 3}
   Name: Rice

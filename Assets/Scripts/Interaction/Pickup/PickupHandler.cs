@@ -21,11 +21,6 @@ public class PickupHandler : MonoBehaviour
             target.DropOff(CurrentObject);
             CurrentObject = null;
         }
-        else
-        {
-            CurrentObject.Drop();
-            CurrentObject = null;
-        }
     }
 
     public void OnDrop(InputAction.CallbackContext context)
@@ -33,6 +28,7 @@ public class PickupHandler : MonoBehaviour
         if (CurrentObject != null && context.performed)
         {
             CurrentObject.Drop();
+            CurrentObject = null;
         }
     }
 }

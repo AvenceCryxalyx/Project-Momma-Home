@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_tofu
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: db6fca4c3bcf7654193e428c925755f1, type: 3}
+  AliveSprite: {fileID: 21300000, guid: db6fca4c3bcf7654193e428c925755f1, type: 3}
+  ExpiredSprite: {fileID: 21300000, guid: c4dd4a9131731e146ad665adadccd2f9, type: 3}
   Name: Tofu

@@ -13,7 +13,7 @@ public class RecipeItemUI : MonoBehaviour
     public void Initialize(RecipeManager.RecipeItemInfo info)
     {
         this.info = info;
-        itemImage.sprite = info.item.so.Image;
+        itemImage.sprite = info.item.so.AliveSprite;
         itemAmount.text = "X" + info.AmountNeeded;
     }
 

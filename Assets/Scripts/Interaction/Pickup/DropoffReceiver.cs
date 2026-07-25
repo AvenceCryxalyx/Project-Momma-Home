@@ -27,14 +27,9 @@ public class DropoffReceiver : MonoBehaviour, IInteractable
     {
         if(_evtInteracted != null)
         {
-            _evtInteracted.Invoke(interactor);
+            _evtInteracted.Invoke(this, interactor);
         }
         interactor.GetComponent<PickupHandler>().DropTo(this);
-    }
-
-    public string InteractionText()
-    {
-        return "Add to Pot [Left Click]";
     }
 
     public bool IsInteractable(InteractionController interactor)

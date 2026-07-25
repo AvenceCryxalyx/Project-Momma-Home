@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_garlic
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: ef2f215726f6f9c4cbdec77e98630cbd, type: 3}
+  AliveSprite: {fileID: 21300000, guid: ef2f215726f6f9c4cbdec77e98630cbd, type: 3}
+  ExpiredSprite: {fileID: 21300000, guid: 4eb0d7a56738dc7438fe6180f410c4ca, type: 3}
   Name: Garlic

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af79a4fcabef7f54998402c8e9be8152, type: 3}
   m_Name: i_so_meat
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: 26dc6075c457df84094beaf981e17d5f, type: 3}
+  AliveSprite: {fileID: 21300000, guid: 26dc6075c457df84094beaf981e17d5f, type: 3}
+  ExpiredSprite: {fileID: 21300000, guid: 28debd4fbd0febb4fa38733bffc8e8cf, type: 3}
   Name: Meat

@@ -14,11 +14,14 @@ public class Ingredient : PickupableObject
     [SerializeField] private SpriteRenderer wings;
     public string Name { get; private set; }
 
+    
+    private Rigidbody rb;
     private Coroutine ExpiredCor;
     private PickupableObject pickUp;
     private SpriteRenderer spriteRend;
     private CharacterController characterController;
     private bool isGrounded;
+    private bool isExpired;
     //private Animator animator;
 
     private void Awake()
@@ -27,7 +30,7 @@ public class Ingredient : PickupableObject
         {
             Initialize(so);
         }
-
+        rb = GetComponent<Rigidbody>();
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         pickUp = GetComponent<PickupableObject>();
 
@@ -36,8 +39,9 @@ public class Ingredient : PickupableObject
 
     public void Initialize(IngredientSO so)
     {
+        this.so = so;
         Name = so.Name;
-        spriteRend.sprite = so.Image;
+        spriteRend.sprite = so.AliveSprite;
     }
 
     private bool isPlayerClose()
@@ -68,23 +72,28 @@ public class Ingredient : PickupableObject
         transform.position -= (normDir * distanceOffset) * Time.deltaTime;
     }
 
-    private void OnInteractable(InteractionController obj)
+    private void OnInteractable(IInteractable interactable, InteractionController obj)
     {
-        GetComponent<Rigidbody>().detectCollisions = false;
+        rb.detectCollisions = false;
     }
 
     private void OnDrop(PickupableObject obj)
     {
-        GetComponent<Rigidbody>().detectCollisions = true;
+        rb.detectCollisions = true;
     }
 
     public void OnSpawned(Spawn spawn)
     {
-        GetComponent<Rigidbody>().useGravity = true;
+        rb.useGravity = true;
+        isExpired = false;
     }
 
     public void OnExpired(Spawn spawn)
     {
+        isExpired = true;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        spriteRend.sprite = so.ExpiredSprite;
         ExpiredCor = StartCoroutine(OnExpiredTask(spawn));
     }
 
@@ -101,6 +110,7 @@ public class Ingredient : PickupableObject
         StopAllCoroutines();
         ExpiredCor = null;
         gameObject.PoolOrDestroy();
+        spriteRend.sprite = so.AliveSprite;
     }
 
     private IEnumerator OnExpiredTask(Spawn spawn)
@@ -116,5 +126,10 @@ public class Ingredient : PickupableObject
         GetComponent<Rigidbody>().useGravity = false;
         yield return new WaitForSeconds(2);
         spawn.OnDespawn();
+    }
+
+    public override bool OverrideIsInteractable()
+    {
+        return 
     }
 }
