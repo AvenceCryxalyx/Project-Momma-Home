@@ -1,16 +1,30 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEngine.InputSystem;
 
 public class RecipeUIController : MonoBehaviour
 {
     [SerializeField] private RecipeItemUI Prefab;
     [SerializeField] private Transform container;
-    [SerializeField] private Vector3 shownPosition;
-    [SerializeField] private Vector3 hiddenPosition;
+    [SerializeField] private RectTransform fullShownTransform;
+    [SerializeField] private RectTransform hiddenTransform;
+    [SerializeField] private float transitionDuration;
 
-
-    private bool isShown = false;
+    private RectTransform thisRect;
+    private float transitionTime;
+    private bool show = false;
+    private bool isShowing = false;
     private List<RecipeItemUI> items = new List<RecipeItemUI>();
+
+    void Awake()
+    {
+        thisRect = GetComponent<RectTransform>();
+        foreach(Transform child in container)
+        {
+            Destroy(child.gameObject);
+        }
+    }
 
     public void AddItem(RecipeManager.RecipeItemInfo item)
     {
@@ -18,19 +32,32 @@ public class RecipeUIController : MonoBehaviour
         newItem.Initialize(item);
         items.Add(newItem);
         newItem.transform.parent = container;
+        newItem.transform.localScale = Vector3.one;
     }
 
-    public void OnToggleVisibility()
+    public void OnToggleVisibility(InputAction.CallbackContext context)
     {
-        if(isShown)
+        if (context.performed)
         {
-            transform.position = hiddenPosition;
+            show = !show;
+            isShowing = true;
         }
-        else
-        {
-            transform.position = shownPosition;
-        }
+    }
 
-        isShown = !isShown;
+    void Update()
+    {
+        if (!isShowing)
+        {
+            return;
+        }
+        float deltaTime = Time.deltaTime * (show ? 1f : -1f);
+        transitionTime += deltaTime / transitionDuration;
+        thisRect.localPosition = Vector3.Lerp(hiddenTransform.localPosition, fullShownTransform.localPosition, transitionTime);
+        if (transitionTime < 0f || transitionTime > 1f)
+        {
+            isShowing = false;
+            transitionTime = show ? 1f : 0f;
+            thisRect.localPosition = Vector3.Lerp(hiddenTransform.localPosition, fullShownTransform.localPosition, transitionTime);
+        }
     }
 }
