@@ -17,6 +17,7 @@ public class Spawn :  Poolable
     public float LifeTime { get; private set; }
     public bool IsAlive { get; private set; }
 
+    private bool isPaused;
     private float timeElapsed = 0f;
     public void Setup(float lifeTime = 10f)
     {
@@ -50,9 +51,14 @@ public class Spawn :  Poolable
         }
     }
 
+    public void SetPause(bool isPaused)
+    {
+        this.isPaused = isPaused;
+    }
+
     public void Update()
     {
-        if (!IsAlive || LifeTime == 0)
+        if (!IsAlive || LifeTime == 0 || isPaused)
         {
             return;
         }

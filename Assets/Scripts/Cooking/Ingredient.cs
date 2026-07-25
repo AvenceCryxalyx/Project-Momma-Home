@@ -34,7 +34,7 @@ public class Ingredient : PickupableObject
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         pickUp = GetComponent<PickupableObject>();
 
-        pickUp.EvtInteracted.AddListener(OnInteractable);
+        pickUp.EvtInteracted.AddListener(OnInteracted);
     }
 
     public void Initialize(IngredientSO so)
@@ -56,6 +56,8 @@ public class Ingredient : PickupableObject
     {
         if(spriteRend)
             spriteRend.transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
+        if(wings)
+            wings.transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
 
         isGrounded = Physics.CheckSphere(groundChecker.position, groundDistance, groundMask);
         if (GameManager.instance == null)
@@ -72,13 +74,15 @@ public class Ingredient : PickupableObject
         transform.position -= (normDir * distanceOffset) * Time.deltaTime;
     }
 
-    private void OnInteractable(IInteractable interactable, InteractionController obj)
+    private void OnInteracted(IInteractable interactable, InteractionController obj)
     {
+        GetComponent<Spawn>().SetPause(true);
         rb.detectCollisions = false;
     }
 
     private void OnDrop(PickupableObject obj)
     {
+        GetComponent<Spawn>().SetPause(false);
         rb.detectCollisions = true;
     }
 
@@ -130,6 +134,6 @@ public class Ingredient : PickupableObject
 
     public override bool OverrideIsInteractable()
     {
-        return 
+        return !isExpired;
     }
 }
