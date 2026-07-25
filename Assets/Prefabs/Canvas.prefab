@@ -597,6 +597,7 @@ RectTransform:
   - {fileID: 442661371246787627}
   - {fileID: 3482425687154989272}
   - {fileID: 5976721095520283422}
+  - {fileID: 6538309817730901574}
   m_Father: {fileID: 5096636370266876303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -656,7 +657,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winMessage: CRISIS AVERTED
   loseMessage: ALL HELL WILL BREAK LOOSE
+  winSprite: {fileID: 21300000, guid: d272271a4894b1e4b870492f5998d78c, type: 3}
+  loseSprite: {fileID: 21300000, guid: 3648d8446bc97ee45ad9d7f957eb0bb6, type: 3}
   GameoverText: {fileID: 5799688988833282658}
+  GameoverDisplay: {fileID: 1994555881675615652}
+  GameoverDisplayAnimation: {fileID: 1482898220164835203}
   textTransitioner: {fileID: 8480990302997671510}
 --- !u!1 &2761575907876122603
 GameObject:
@@ -906,6 +911,99 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3501155928606039083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6538309817730901574}
+  - component: {fileID: 4722117191655029007}
+  - component: {fileID: 1994555881675615652}
+  - component: {fileID: 1482898220164835203}
+  m_Layer: 5
+  m_Name: LiveReaction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6538309817730901574
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501155928606039083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6212843275850769871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 133}
+  m_SizeDelta: {x: 606.325, y: 606.325}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4722117191655029007
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501155928606039083}
+  m_CullTransparentMesh: 1
+--- !u!114 &1994555881675615652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501155928606039083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3648d8446bc97ee45ad9d7f957eb0bb6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!111 &1482898220164835203
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501155928606039083}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: e0de1c68e4e07ed488bf2c6c91157009, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e0de1c68e4e07ed488bf2c6c91157009, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &3655786903488290510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1969,7 @@ MonoBehaviour:
   textMeshes:
   - {fileID: 5799688988833282658}
   duration: 1
-  delayPerCharacter: 0.1
+  delayPerCharacter: 0.055
   lingerDuration: -1
   originalPositions: []
 --- !u!1 &6306754140603814409
