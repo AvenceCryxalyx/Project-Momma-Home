@@ -52,6 +52,6 @@ public class GameOver : MonoBehaviour
     {
         GameoverDisplay.color = new Color(1f, 1f, 1f, 0f);
         yield return new WaitForSeconds(1.5f);
-        GameoverDisplayAnimation.Play();
+        GameoverDisplayAnimation.Play("Show");
     }
 }
