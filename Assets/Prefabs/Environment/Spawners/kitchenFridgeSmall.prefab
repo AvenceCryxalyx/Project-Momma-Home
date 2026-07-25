@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7250978265067775940}
   - component: {fileID: 4967328792750214204}
   m_Layer: 8
-  m_Name: KitchenFridgeSmall
+  m_Name: kitchenFridgeSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 4040188365046767444}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4698ea1289637b64eab8a5bf770b494f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -237,7 +237,7 @@ Animator:
   m_GameObject: {fileID: 6382620168038351704}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4698ea1289637b64eab8a5bf770b494f, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
