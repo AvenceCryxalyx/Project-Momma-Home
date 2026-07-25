@@ -26,12 +26,10 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
         }
     }
 
-    [SerializeField] private Vector3 baseDirection;
-    [SerializeField] private float baseForce = 100f;
-    [SerializeField] private SpawnLaunchParameters spawnLaunchParameters;
+    [SerializeField] private IngredientSpawnerSO so;
     [SerializeField] private Transform SpawnPoint;
     [SerializeField] private InteractedEvent _evtInteracted;
-    [SerializeField] private WeightedGachaSO so;
+
     private Gacha spawnGacha;
     private int spawnAmount;
 
@@ -39,7 +37,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
     {
         if(so)
         {
-            spawnGacha = new Gacha(so.Infos);
+            spawnGacha = new Gacha(so.weights.Infos);
             this.spawnAmount = Random.Range(1, 5);
         }
         if(SpawnPoint == null)
@@ -63,7 +61,7 @@ public class IngredientSpawner : MonoBehaviour, IInteractable
         {
             PickupableObject pick = IngredientManager.instance.GetIngredient(spawn);
             pick.transform.position = SpawnPoint.transform.position;
-            pick.GetComponent<Rigidbody>().AddForce(((transform.forward + baseDirection) + spawnLaunchParameters.GetRandomLaunchForce()) * baseForce);
+            pick.GetComponent<Rigidbody>().AddForce(((transform.forward + so.BaseDirection) + so.SpawnLaunchParameters.GetRandomLaunchForce()) * so.BaseForce);
             pick.GetComponent<Spawn>().OnSpawn();
         }
     }
