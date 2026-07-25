@@ -15,21 +15,21 @@ public class RecipeManager : MonoBehaviour
         public UnityEvent OnCompleted = new UnityEvent();
 
         public RecipeRequirementsSO.RecipeItem item;
-        public bool IsDone { get { return AmountNeeded >= item.amount; } }
-
-        public int AmountNeeded { get; private set; }
+        public bool IsDone { get { return AmountNeeded <= 0; } }
+        public int AmountNeeded { get { return item.amount - AmountGathered; } }
+        public int AmountGathered { get; private set; }
 
         public void Initialize(RecipeRequirementsSO.RecipeItem item)
         {
             this.item = item;
-            AmountNeeded = 0;
+            AmountGathered = 0;
         }
 
         public void OnProgress(int amount)
         {
             if (IsDone)
                 return;
-            AmountNeeded += amount;
+            AmountGathered += amount;
         }
     }
 
