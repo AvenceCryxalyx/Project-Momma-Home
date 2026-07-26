@@ -31,6 +31,7 @@ public class IngredientManager : MonoBehaviour
     public PickupableObject GetIngredient(string name)
     {
         Ingredient newPick = poolController.SourceCollection.GetObject(Prefab);
+        newPick.transform.localScale = Vector3.one;
         newPick.Initialize(Ingredients[name]);
         newPick.GetComponent<Rigidbody>().isKinematic = false;
         newPick.transform.parent = null;
