@@ -214,8 +214,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.8448465}
+  m_Center: {x: 5, y: 6.44766, z: -0.42242324}
 --- !u!208 &2819542
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -455,8 +455,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 12.89532, z: 0.5}
-  m_Center: {x: 2.5, y: 6.44766, z: 0.25}
+  m_Size: {x: 5, y: 12.89532, z: 1.1143854}
+  m_Center: {x: 2.5, y: 6.44766, z: -0.057192743}
 --- !u!208 &61793342
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -1050,8 +1050,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000004, y: 12.89532, z: 0.89100033}
-  m_Center: {x: 5.000002, y: 6.44766, z: 0.2500001}
+  m_Size: {x: 10.000004, y: 12.89532, z: 3.0428274}
+  m_Center: {x: 5.000002, y: 6.44766, z: -0.82591075}
 --- !u!208 &251056356
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -1928,8 +1928,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 12.89532, z: 0.5}
-  m_Center: {x: 2.5, y: 6.44766, z: 0.25}
+  m_Size: {x: 5, y: 12.89532, z: 2.1167154}
+  m_Center: {x: 2.5, y: 6.44766, z: -0.5583578}
 --- !u!208 &343886042
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -2703,8 +2703,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.89100015}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.4474714}
+  m_Center: {x: 5.000001, y: 6.44766, z: -0.5282353}
 --- !u!208 &431799280
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -3299,8 +3299,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000004, y: 12.89532, z: 0.89100033}
-  m_Center: {x: 5.000002, y: 6.44766, z: 0.2500001}
+  m_Size: {x: 10.000004, y: 12.89532, z: 2.9396644}
+  m_Center: {x: 5.000002, y: 6.44766, z: -0.7743311}
 --- !u!208 &491858770
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -3551,7 +3551,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4432109239353421439, guid: 48a29b414c54a7442912590ab88ac885, type: 3}
 --- !u!208 &547758678
@@ -3931,8 +3931,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 0.88492894}
+  m_Center: {x: 5.000023, y: 6.4476905, z: 0.05753553}
 --- !u!208 &606552988
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4049,8 +4049,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.5286659}
+  m_Center: {x: 5, y: 6.44766, z: -0.26433295}
 --- !u!208 &608712265
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4295,8 +4295,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 12.89532, z: 0.5}
-  m_Center: {x: 2.5, y: 6.44766, z: 0.25}
+  m_Size: {x: 5, y: 12.89532, z: 1.8372594}
+  m_Center: {x: 2.5, y: 6.44766, z: -0.41862983}
 --- !u!208 &622185966
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4432,8 +4432,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.89100015}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.1982305}
+  m_Center: {x: 5.000001, y: 6.44766, z: -0.40361503}
 --- !u!208 &653365586
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -5162,8 +5162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.7795718}
+  m_Center: {x: 5, y: 6.44766, z: -0.3897859}
 --- !u!208 &719136183
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -5407,8 +5407,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.89100015}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.402784}
+  m_Center: {x: 4.9999995, y: 6.44766, z: -0.505892}
 --- !u!208 &732390823
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -5533,8 +5533,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.89100015}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.4082463}
+  m_Center: {x: 5.0000014, y: 6.44766, z: -0.5086226}
 --- !u!208 &732965096
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6154,8 +6154,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 2.8041995}
+  m_Center: {x: 5.000039, y: 6.447718, z: 0.4982408}
 --- !u!208 &808980228
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6321,8 +6321,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 2.002408}
+  m_Center: {x: 5.000015, y: 6.447681, z: -0.50120425}
 --- !u!208 &835646410
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6448,8 +6448,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.50000006}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.2240913}
+  m_Center: {x: 5.0000052, y: 6.4477487, z: 1.1120458}
 --- !u!208 &849421266
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6934,7 +6934,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4432109239353421439, guid: 48a29b414c54a7442912590ab88ac885, type: 3}
 --- !u!208 &955284862
@@ -7053,8 +7053,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.5351464}
+  m_Center: {x: 5, y: 6.44766, z: -0.26757318}
 --- !u!208 &992921011
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -7989,8 +7989,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.7187275}
+  m_Center: {x: 5, y: 6.44766, z: -0.35936373}
 --- !u!208 &1150379749
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -8786,8 +8786,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.50000006}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.272199}
+  m_Center: {x: 5.000001, y: 6.44766, z: -0.63610035}
 --- !u!208 &1338207115
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9152,8 +9152,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 12.89532, z: 0.5000001}
-  m_Center: {x: 5.000001, y: 6.44766, z: 0.25000006}
+  m_Size: {x: 10.000003, y: 12.89532, z: 2.271072}
+  m_Center: {x: 5.0000086, y: 6.4476914, z: -0.6355368}
 --- !u!208 &1365213152
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9978,8 +9978,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 12.89532, z: 0.5}
-  m_Center: {x: 2.5, y: 6.44766, z: 0.25}
+  m_Size: {x: 5, y: 12.89532, z: 2.201518}
+  m_Center: {x: 2.5, y: 6.44766, z: 1.100759}
 --- !u!208 &1459428698
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -10506,8 +10506,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 2.339737}
+  m_Center: {x: 5, y: 6.44766, z: -0.6698686}
 --- !u!208 &1489577319
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -10825,7 +10825,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8001616320750332228, guid: 3d98b03d9cab42d429150b4bad15e26e, type: 3}
 --- !u!208 &1502870166
@@ -11302,8 +11302,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 12.89532, z: 0.5000001}
-  m_Center: {x: 5.000001, y: 6.44766, z: 0.25000006}
+  m_Size: {x: 10.000003, y: 12.89532, z: 2.2327633}
+  m_Center: {x: 5.00002, y: 6.447701, z: -0.6163821}
 --- !u!208 &1607986627
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11718,8 +11718,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.50000006}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 2.5053551}
+  m_Center: {x: 5.0000005, y: 6.44766, z: -0.7526787}
 --- !u!208 &1702022646
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -12190,8 +12190,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.8048928}
+  m_Center: {x: 5.000032, y: 6.4477, z: -0.40244722}
 --- !u!208 &1736135592
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -12388,8 +12388,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 2.3199825}
+  m_Center: {x: 5, y: 6.44766, z: -0.65999126}
 --- !u!208 &1771490514
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -12618,8 +12618,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 1.6407094}
+  m_Center: {x: 5, y: 6.44766, z: -0.3203547}
 --- !u!208 &1840318565
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13415,7 +13415,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4432109239353421439, guid: 48a29b414c54a7442912590ab88ac885, type: 3}
 --- !u!208 &1941975269
@@ -13538,8 +13538,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 12.89532, z: 0.50000006}
-  m_Center: {x: 5.0000005, y: 6.44766, z: 0.25000003}
+  m_Size: {x: 10.000001, y: 12.89532, z: 1.112645}
+  m_Center: {x: 5.0000033, y: 6.447699, z: 0.277538}
 --- !u!208 &1949810330
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13775,7 +13775,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4432109239353421439, guid: 48a29b414c54a7442912590ab88ac885, type: 3}
 --- !u!208 &1975534581
@@ -13894,8 +13894,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 2.31468}
+  m_Center: {x: 5.000019, y: 6.447684, z: -0.65734065}
 --- !u!208 &1994277286
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -14012,8 +14012,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 12.89532, z: 0.5}
-  m_Center: {x: 5, y: 6.44766, z: 0.25}
+  m_Size: {x: 10, y: 12.89532, z: 2.8628254}
+  m_Center: {x: 5, y: 6.44766, z: -0.93141246}
 --- !u!208 &1999860210
 NavMeshObstacle:
   m_ObjectHideFlags: 0

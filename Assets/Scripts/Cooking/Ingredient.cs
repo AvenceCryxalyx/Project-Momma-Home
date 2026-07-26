@@ -70,7 +70,8 @@ public class Ingredient : PickupableObject
         Vector3 normDir = Vector3.Normalize(playerPos - gameObject.transform.position);
         normDir = Quaternion.AngleAxis(15, Vector3.up) * normDir;
 
-        transform.position -= (normDir * distanceOffset) * Time.deltaTime;
+        //transform.position -= (normDir * distanceOffset) * Time.deltaTime;
+        rb.position -= (normDir * distanceOffset) * Time.deltaTime;
     }
 
     private void OnInteracted(IInteractable interactable, InteractionController obj)
