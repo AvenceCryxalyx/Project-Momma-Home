@@ -60,7 +60,7 @@ public class IngredientSpawnerActivator : MonoBehaviour
         if (activeSpawners.Count >= maxActiveSpawners && pool.Count == 0)
             return;
 
-        int rand = Random.Range(0, pool.Count - 1);
+        int rand = Random.Range(0, pool.Count);
         IngredientSpawner active = pool[rand];
         active.Activate();
         activeSpawners.Add(active);
