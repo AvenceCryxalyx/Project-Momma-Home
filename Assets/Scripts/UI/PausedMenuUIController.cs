@@ -9,8 +9,11 @@ public class PausedMenuUIController : MonoBehaviour
 
     private void OnEnable()
     {
-        prevGameState =GameManager.instance.CurrentState;
+        prevGameState = GameManager.instance.CurrentState;
         GameManager.instance.PauseGame();
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
+        AudioManager.instance.UpdateBGMSuspension(true);
     }
 
     private void OnDisable()
@@ -32,7 +35,13 @@ public class PausedMenuUIController : MonoBehaviour
             default:
                 break;
         }
+        AudioManager.instance.UpdateBGMSuspension(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        GameManager.instance.Player.GetComponent<MovementController>().enabled = true;
+        GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = true;
+        Time.timeScale = 1f;
     }
+
 
     public void ShowOptions()
     {

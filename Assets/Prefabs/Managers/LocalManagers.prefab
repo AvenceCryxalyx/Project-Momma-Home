@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverObject: {fileID: 0}
+  GameplayUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  pauseController: {fileID: 0}
+  SceneBGM: {fileID: 8300000, guid: 21ab538cecedc0c43acaabb41ae69fd5, type: 3}
 --- !u!1 &2475812738639902583
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +94,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9821b0b1a5fc6954996eed3da9246a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allSpawners: []
+  allSpawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   maxActiveSpawners: 4
   activationInterval: 5
   firstToActivate: {fileID: 0}
@@ -140,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: -7527704182762109852, guid: 256a48b7e5a299c44b021d9927e49597, type: 3}
-  settings: {fileID: 0}
+  settings: {fileID: 11400000, guid: 5b4cd1ae8b328a947966d4e61ee4685a, type: 2}
   IngredientsList:
   - {fileID: 11400000, guid: 05edd74f67b7cad429c316831eeafde7, type: 2}
   - {fileID: 11400000, guid: 294744392c9e3b341ace746df0eab2cb, type: 2}
@@ -211,7 +233,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeReceiver: {fileID: 0}
   uiController: {fileID: 0}
-  requirementsList: []
+  requirementsList:
+  - {fileID: 11400000, guid: 46379762f7c8cb244bb9f2ec3ae94e9f, type: 2}
+  - {fileID: 11400000, guid: 4f11f2698435e5440a5f220f3449734d, type: 2}
+  - {fileID: 11400000, guid: 1ef3db9cd632bac4cb3bf2de394eabac, type: 2}
 --- !u!1 &8176497998125206412
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9ad9d36bf211e49849c18ae982eadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTimerSeconds: 600
+  MaxTimerSeconds: 90
 --- !u!1 &8293310658965818155
 GameObject:
   m_ObjectHideFlags: 0

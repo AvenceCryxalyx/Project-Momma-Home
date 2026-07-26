@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   MouseSensitivity: 50
-  MasterVolume: 0
+  MasterVolume: -20
   BGMVolume: 0
   SFXVolume: 0

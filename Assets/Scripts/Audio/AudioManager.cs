@@ -18,8 +18,10 @@ public class AudioManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        else
+            Destroy(this);
 
-        bgmSource = GetComponent<AudioSource>();
+            bgmSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(this);
     }
 

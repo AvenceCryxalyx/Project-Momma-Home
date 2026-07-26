@@ -13,7 +13,10 @@ public class LookController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        settings = GameManager.instance.GameSettings;
+        if (GameManager.instance)
+            settings = GameManager.instance.GameSettings;
+        else
+            settings = new GameSettings();
     }
 
     public void OnLook(InputAction.CallbackContext context)

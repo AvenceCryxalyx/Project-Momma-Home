@@ -11,7 +11,8 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
 
     private void Awake()
     {
-        AudioManager.instance.UpdateBGMSuspension(true);
+        if(AudioManager.instance)
+            AudioManager.instance.UpdateBGMSuspension(true);
         StartGameplay();
     }
 
@@ -21,7 +22,8 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
         {
             go.SetActive(true);
         }
-        AudioManager.instance.PlayBGM(SceneBGM);
+        if (AudioManager.instance)
+            AudioManager.instance.PlayBGM(SceneBGM);
         TimeManager.instance.Initialized();
     }
 
@@ -60,12 +62,6 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
                 GameManager.instance.Player.GetComponent<MovementController>().enabled = false;
                 GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = false;
                 pauseController.gameObject.SetActive(true);
-            }
-            else
-            {
-                GameManager.instance.Player.GetComponent<MovementController>().enabled = true;
-                GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = true;
-                pauseController.gameObject.SetActive(false);
             }
         }
     }

@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        else
+            Destroy(this);
         GameSettings = Instantiate(GameSettings);
         DontDestroyOnLoad(this);
         SceneManager.sceneLoaded += OnSceneLoaded;
