@@ -6,6 +6,7 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
 {
     [SerializeField] private GameOver GameOverObject;
     [SerializeField] private List<GameObject> GameplayUI;
+    [SerializeField] private SimpleCutsceneDirector introDirector;
     [SerializeField] private PausedMenuUIController pauseController;
     [SerializeField] private AudioClip SceneBGM;
 
@@ -13,11 +14,21 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
     {
         if(AudioManager.instance)
             AudioManager.instance.UpdateBGMSuspension(true);
-        StartGameplay();
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        GameManager.instance.Player.GetComponent<MovementController>().enabled = false;
+        GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = false;
+        introDirector.ProgressCutScene();
     }
 
     public void StartGameplay()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        GameManager.instance.Player.GetComponent<MovementController>().enabled = true;
+        GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = true;
         foreach (GameObject go in GameplayUI)
         {
             go.SetActive(true);
@@ -25,6 +36,7 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
         if (AudioManager.instance)
             AudioManager.instance.PlayBGM(SceneBGM);
         TimeManager.instance.Initialized();
+        introDirector.gameObject.SetActive(false);
     }
 
     private void Update()
