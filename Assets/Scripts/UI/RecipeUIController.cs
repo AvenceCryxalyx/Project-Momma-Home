@@ -39,6 +39,9 @@ public class RecipeUIController : MonoBehaviour
 
     public void OnToggleVisibility(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.CurrentState != GameState.Playing)
+            return;
+
         if (context.performed)
         {
             show = !show;

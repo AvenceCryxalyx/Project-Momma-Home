@@ -9,6 +9,13 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private float MaxTimerSeconds;
 
     private float timeElapsed;
+    public bool IsInitialized { get; private set; }
+
+    public void Initialized()
+    {
+        IsInitialized = true;
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -25,7 +32,7 @@ public class TimeManager : MonoBehaviour
         if (GameManager.instance == null)
             return;
 
-        if (GameManager.instance.CurrentState != GameState.Playing)
+        if (GameManager.instance.CurrentState != GameState.Playing || !IsInitialized)
             return;
 
         timeElapsed += Time.deltaTime;
