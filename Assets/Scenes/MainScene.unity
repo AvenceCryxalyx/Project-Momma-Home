@@ -3030,6 +3030,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 506284791}
     m_Modifications:
+    - target: {fileID: 1122380853813491092, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122380853813491092, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122380853813491092, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: DopplerLevel
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122380853813491092, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.31944445
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122380853813491092, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.274
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122380853813491092, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.359
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: Priority
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: DopplerLevel
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: BypassEffects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6788829055138307536, guid: 477cf9b484bed91408a9c08d8e758500, type: 2}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.19166666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733123264018827392, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3566246956173029879, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
       propertyPath: m_Name
       value: 'pot-stew '
@@ -3072,6 +3136,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194551212524350285, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567257876766003226, guid: e759c2e84f43355439af7bc822a871c3, type: 3}
+      propertyPath: shouldLoop
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9262,36 +9330,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4332842613019127052, guid: 8955419833e4c66468eff20b1925af42, type: 3}
+    - target: {fileID: 3000933213044249160, guid: 8955419833e4c66468eff20b1925af42, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4332842613019127052, guid: 8955419833e4c66468eff20b1925af42, type: 3}
+    - target: {fileID: 3000933213044249160, guid: 8955419833e4c66468eff20b1925af42, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4332842613019127052, guid: 8955419833e4c66468eff20b1925af42, type: 3}
+    - target: {fileID: 3000933213044249160, guid: 8955419833e4c66468eff20b1925af42, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 196.72702
       objectReference: {fileID: 0}
-    - target: {fileID: 4332842613019127052, guid: 8955419833e4c66468eff20b1925af42, type: 3}
+    - target: {fileID: 3000933213044249160, guid: 8955419833e4c66468eff20b1925af42, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -225.1
       objectReference: {fileID: 0}
-    - target: {fileID: 4711976375991465171, guid: 8955419833e4c66468eff20b1925af42, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4711976375991465171, guid: 8955419833e4c66468eff20b1925af42, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4711976375991465171, guid: 8955419833e4c66468eff20b1925af42, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4711976375991465171, guid: 8955419833e4c66468eff20b1925af42, type: 3}
-      propertyPath: m_AnchoredPosition.y
+    - target: {fileID: 4869777238472154643, guid: 8955419833e4c66468eff20b1925af42, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096636370266876303, guid: 8955419833e4c66468eff20b1925af42, type: 3}
@@ -14622,6 +14678,10 @@ PrefabInstance:
       propertyPath: 'allSpawners.Array.data[16]'
       value: 
       objectReference: {fileID: 916312304660458561}
+    - target: {fileID: 854975525345712322, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2860087479953343092, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
       propertyPath: settings
       value: 

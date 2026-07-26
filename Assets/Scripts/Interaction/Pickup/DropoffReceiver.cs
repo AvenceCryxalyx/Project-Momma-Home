@@ -19,8 +19,7 @@ public class DropoffReceiver : MonoBehaviour, IInteractable
         {
             EvtDroppedOff.Invoke(pickup);
         }
-
-        pickup.gameObject.PoolOrDestroy();
+        pickup.GetComponent<Spawn>().OnDespawn();
     }
 
     public void Interact(InteractionController interactor)

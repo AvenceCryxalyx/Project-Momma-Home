@@ -10,6 +10,8 @@ public class RecipeUIController : MonoBehaviour
     [SerializeField] private RectTransform fullShownTransform;
     [SerializeField] private RectTransform hiddenTransform;
     [SerializeField] private float transitionDuration;
+    [SerializeField] private AudioSource slideInSFX;
+    [SerializeField] private AudioSource slideOutSFX;
 
     private RectTransform thisRect;
     private float transitionTime;
@@ -41,6 +43,12 @@ public class RecipeUIController : MonoBehaviour
         {
             show = !show;
             isShowing = true;
+            slideInSFX.time = 0;
+            slideOutSFX.time = 0;
+            if(show)
+                slideInSFX.Play();
+            else
+                slideOutSFX.Play();
         }
     }
 

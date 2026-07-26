@@ -5,13 +5,13 @@ using UnityEngine;
 public class SFXListPlayer : MonoBehaviour
 {
     [SerializeField] private List<AudioClip> clipList;
-
+    [SerializeField] private bool shouldLoop = false;
     private AudioSource audioSource;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.loop = false;
+        audioSource.loop = shouldLoop;
     }
 
     public void Play(int index = -1)
@@ -31,5 +31,6 @@ public class SFXListPlayer : MonoBehaviour
             return;
 
         audioSource.Stop();
+        audioSource.time = 0;
     }
 }

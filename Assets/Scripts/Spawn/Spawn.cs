@@ -45,6 +45,7 @@ public class Spawn :  Poolable
 
     public void OnDespawn()
     {
+        IsAlive = false;
         if (EvtDespawn != null)
         {
             EvtDespawn.Invoke(this);
