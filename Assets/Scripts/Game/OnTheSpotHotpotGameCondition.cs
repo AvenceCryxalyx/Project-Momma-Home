@@ -4,6 +4,17 @@ using UnityEngine.InputSystem;
 public class OnTheSpotHotpotGameCondition : MonoBehaviour
 {
     [SerializeField] private GameOver GameOverObject;
+    [SerializeField] private AudioClip SceneBGM;
+
+    private void Awake()
+    {
+        AudioManager.instance.UpdateBGMSuspension(true);
+    }
+
+    public void StartGameplay()
+    {
+        AudioManager.instance.PlayBGM(SceneBGM);
+    }
 
     private void Update()
     {

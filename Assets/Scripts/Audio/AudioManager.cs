@@ -45,6 +45,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBGM(AudioClip clip)
     {
+        bgmSource.Stop();
+        bgmSource.time = 0;
         bgmSource.clip = clip;
         bgmSource.Play();
     }
