@@ -55,7 +55,7 @@ public class RecipeManager : MonoBehaviour
         RecipeRequirementsSO so;
         if (count > 1)
         {
-            int index = UnityEngine.Random.Range(0, count - 1);
+            int index = UnityEngine.Random.Range(0, count);
             so = requirementsList[index];
         }
         else
