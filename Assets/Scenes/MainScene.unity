@@ -7535,7 +7535,7 @@ PrefabInstance:
     - target: {fileID: 7521205233644104054, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
       propertyPath: SpawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1067869159}
     - target: {fileID: 8263528996296696297, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
       propertyPath: m_Name
       value: KitchenCabinetDrawer (6)
@@ -7549,6 +7549,11 @@ PrefabInstance:
 --- !u!4 &1067869158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 192881508210322989, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
+  m_PrefabInstance: {fileID: 1067869157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1067869159 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7856464575841445329, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
   m_PrefabInstance: {fileID: 1067869157}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1107689772 stripped
@@ -8341,7 +8346,7 @@ PrefabInstance:
     - target: {fileID: 5630143263969760490, guid: 0d1d2bfa1787eb04c94e114b1bb41699, type: 3}
       propertyPath: SpawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1192647997}
     - target: {fileID: 8475185771103521047, guid: 0d1d2bfa1787eb04c94e114b1bb41699, type: 3}
       propertyPath: m_Name
       value: KitchenCabinetUpper (1)
@@ -8354,6 +8359,11 @@ PrefabInstance:
 --- !u!4 &1192647996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 979242412200100834, guid: 0d1d2bfa1787eb04c94e114b1bb41699, type: 3}
+  m_PrefabInstance: {fileID: 1192647995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1192647997 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1944578875154959483, guid: 0d1d2bfa1787eb04c94e114b1bb41699, type: 3}
   m_PrefabInstance: {fileID: 1192647995}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1212007971 stripped
@@ -12314,7 +12324,7 @@ PrefabInstance:
     - target: {fileID: 7521205233644104054, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
       propertyPath: SpawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1761309584}
     - target: {fileID: 8263528996296696297, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
       propertyPath: m_Name
       value: KitchenCabinetDrawer (7)
@@ -12328,6 +12338,11 @@ PrefabInstance:
 --- !u!4 &1761309583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 192881508210322989, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
+  m_PrefabInstance: {fileID: 1761309582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1761309584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7856464575841445329, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
   m_PrefabInstance: {fileID: 1761309582}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1771490511
@@ -14480,7 +14495,7 @@ PrefabInstance:
     - target: {fileID: 7521205233644104054, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
       propertyPath: SpawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2115602750}
     - target: {fileID: 8263528996296696297, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
       propertyPath: m_Name
       value: KitchenCabinetDrawer (5)
@@ -14494,6 +14509,11 @@ PrefabInstance:
 --- !u!4 &2115602749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 192881508210322989, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
+  m_PrefabInstance: {fileID: 2115602748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2115602750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7856464575841445329, guid: ff3c2c1b8e6d5b640b9ae17941620cc2, type: 3}
   m_PrefabInstance: {fileID: 2115602748}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2121626079

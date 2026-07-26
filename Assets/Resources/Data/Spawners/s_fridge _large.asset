@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb662cc35fd29e49ac56a609e5d61e7, type: 3}
   m_Name: s_fridge _large
   m_EditorClassIdentifier: 
+  minSpawnAmount: 1
+  maxSpawnAmount: 5
   BaseDirection: {x: 0, y: 1, z: 0}
-  BaseForce: 2
+  BaseForce: 5
   SpawnLaunchParameters:
-    minXOffset: 3
-    maxXOffset: 5
+    minXOffset: 4
+    maxXOffset: 8
     minYOffset: 2
     maxYOffset: 3
-    minZOffset: -4
-    maxZOffset: 4
+    minZOffset: -6
+    maxZOffset: 2

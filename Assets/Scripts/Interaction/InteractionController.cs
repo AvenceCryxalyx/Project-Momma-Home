@@ -9,7 +9,6 @@ public class InteractionController : MonoBehaviour
 
     private RaycastHit hit;
     private IInteractable currentTargetInteractable;
-    Ray ray;
 
     public void OnInteract(InputAction.CallbackContext context)
     {
@@ -30,7 +29,7 @@ public class InteractionController : MonoBehaviour
                 {
                     return;
                 }
-                    if (interactable.IsInteractable(this) && currentTargetInteractable != interactable)
+                if (interactable.IsInteractable(this) && currentTargetInteractable != interactable)
                 {
                     currentTargetInteractable = interactable;
                     ReticleUIController.instance.UpdateReticle(interactable);

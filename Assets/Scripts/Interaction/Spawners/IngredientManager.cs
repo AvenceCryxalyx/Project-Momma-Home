@@ -9,7 +9,6 @@ public class IngredientManager : MonoBehaviour
 
     [SerializeField] private IngredientsGlobalSettings settings;
     [SerializeField] private List<IngredientSO> IngredientsList;
-    [SerializeField] private int maxActiveIngredientsSpawners;
     private Dictionary<string, IngredientSO> Ingredients = new Dictionary<string, IngredientSO>();
     private PoolSourceController poolController;
 

@@ -54,9 +54,9 @@ public class Ingredient : PickupableObject
 
     private void Update()
     {
-        if(spriteRend)
+        if(spriteRend && Camera.main)
             spriteRend.transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
-        if(wings)
+        if(wings && Camera.main)
             wings.transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
 
         isGrounded = Physics.CheckSphere(groundChecker.position, groundDistance, groundMask);
