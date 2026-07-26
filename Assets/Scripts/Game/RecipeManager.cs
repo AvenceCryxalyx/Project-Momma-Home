@@ -40,7 +40,6 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private DropoffReceiver recipeReceiver;
     [SerializeField] private RecipeUIController uiController;
     [SerializeField] private RecipeRequirementsSO[] requirementsList;
-
     private Dictionary<string, RecipeItemInfo> CurrentItems = new Dictionary<string, RecipeItemInfo>();
     public RecipeItemInfo ActiveItem { get; private set; }
 

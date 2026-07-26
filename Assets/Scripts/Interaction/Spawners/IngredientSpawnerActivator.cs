@@ -9,6 +9,7 @@ public class IngredientSpawnerActivator : MonoBehaviour
     [SerializeField] private IngredientSpawner firstToActivate;
 
     private List<IngredientSpawner> activeSpawners = new List<IngredientSpawner>();
+    private List<IngredientSpawner> pool = new List<IngredientSpawner>();
     private float timeElapsed;
 
     private void Awake()
@@ -16,6 +17,7 @@ public class IngredientSpawnerActivator : MonoBehaviour
         foreach (IngredientSpawner spawner in allSpawners)
         {
             spawner.EvtInteracted.AddListener(OnSpawnerInteracted);
+            pool.Add(spawner);
         }
     }
 
@@ -35,6 +37,11 @@ public class IngredientSpawnerActivator : MonoBehaviour
         if (timeElapsed >= activationInterval)
         {
             ActivateRandomSpawner();
+
+            if (pool.Count <= 0)
+            {
+                pool.AddRange(allSpawners);
+            }
             return;
         }
 
@@ -50,14 +57,15 @@ public class IngredientSpawnerActivator : MonoBehaviour
 
     private void ActivateRandomSpawner()
     {
-        if (activeSpawners.Count >= maxActiveSpawners)
+        if (activeSpawners.Count >= maxActiveSpawners && pool.Count == 0)
             return;
 
-        int rand = Random.Range(0, allSpawners.Count - 1);
-        IngredientSpawner active = allSpawners[rand];
+        int rand = Random.Range(0, pool.Count - 1);
+        IngredientSpawner active = pool[rand];
         active.Activate();
         activeSpawners.Add(active);
         timeElapsed = 0;
+        pool.Remove(active);
     }
 
     private void OnSpawnerInteracted(IInteractable interactable, InteractionController controller)

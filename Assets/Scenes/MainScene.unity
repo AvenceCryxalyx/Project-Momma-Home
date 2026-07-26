@@ -14660,12 +14660,20 @@ PrefabInstance:
       objectReference: {fileID: 482962667}
     - target: {fileID: 95012434504575311, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
       propertyPath: requirementsList.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 95012434504575311, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
       propertyPath: 'requirementsList.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: ac5428c5941da9d439c72c97c7b02226, type: 2}
+      objectReference: {fileID: 11400000, guid: 46379762f7c8cb244bb9f2ec3ae94e9f, type: 2}
+    - target: {fileID: 95012434504575311, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
+      propertyPath: 'requirementsList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f11f2698435e5440a5f220f3449734d, type: 2}
+    - target: {fileID: 95012434504575311, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
+      propertyPath: 'requirementsList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ef3db9cd632bac4cb3bf2de394eabac, type: 2}
     - target: {fileID: 206997188706677604, guid: edbec7730c1a7124fbe34d3e0b9c3eb3, type: 3}
       propertyPath: MaxTimerSeconds
       value: 90
