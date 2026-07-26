@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -22,9 +23,11 @@ public class GameManager : MonoBehaviour
 
     public GameState CurrentState { get; private set; }
 
+    private bool sceneLoading;
+
     public void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -37,7 +40,21 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(MainSceneName, LoadSceneMode.Single);
+        IEnumerator loadAsync()
+        {
+            this.sceneLoading = true;
+            AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(MainSceneName, LoadSceneMode.Single);
+            sceneLoading.allowSceneActivation = false;
+            yield return new WaitUntil(() => ScreenTransition.Instance.IsBlocked());
+            sceneLoading.allowSceneActivation = true;
+            this.sceneLoading = false;
+        }
+        if (sceneLoading)
+        {
+            return;
+        }
+        ScreenTransition.Instance.WipeIn();
+        StartCoroutine(loadAsync());
     }
 
     public void ResumePlaying()
@@ -71,13 +88,31 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Uninitialized;
 
-        if(reload)
-            SceneManager.LoadScene("MainMenu");
+        if (reload)
+        {
+            IEnumerator loadAsync()
+            {
+                this.sceneLoading = true;
+                AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(MainMenuScene, LoadSceneMode.Single);
+                sceneLoading.allowSceneActivation = false;
+                yield return new WaitUntil(() => ScreenTransition.Instance.IsBlocked());
+                sceneLoading.allowSceneActivation = true;
+                this.sceneLoading = false;
+            }
+            if (sceneLoading)
+            {
+                return;
+            }
+            ScreenTransition.Instance.WipeIn();
+            StartCoroutine(loadAsync());
+            //SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(scene.name == MainSceneName)
+        ScreenTransition.Instance.WipeOut();
+        if (scene.name == MainSceneName)
         {
             if (Player == null)
             {

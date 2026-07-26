@@ -25,3 +25,5 @@ MonoBehaviour:
     weight: 0
   - id: Egg
     weight: 0
+  - id: Garlic
+    weight: 0
