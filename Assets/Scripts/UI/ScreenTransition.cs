@@ -12,12 +12,13 @@ public class ScreenTransition : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
         Instance ??= this;
         if (Instance != this)
         {
             Destroy(this);
         }
+        
+        DontDestroyOnLoad(this);
         animator.Play(wipeIdleIn);
     }
 
