@@ -2787,6 +2787,7 @@ GameObject:
   - component: {fileID: 2278054171764452390}
   - component: {fileID: 8123627522298138013}
   - component: {fileID: 2842797440610271521}
+  - component: {fileID: 4395717697429641596}
   m_Layer: 5
   m_Name: BorderBG
   m_TagString: Untagged
@@ -2851,6 +2852,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &4395717697429641596
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748446343912035233}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 49fe12544f0b83a489540b7aa59cb99b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 49fe12544f0b83a489540b7aa59cb99b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &6949453869949713099
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,7 +3455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.645, g: 0.5679245, b: 0.38537735, a: 0.8}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
