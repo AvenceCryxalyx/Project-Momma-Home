@@ -18,6 +18,7 @@ public class ScreenTransition : MonoBehaviour
         {
             Destroy(this);
         }
+        animator.Play(wipeIdleIn);
     }
 
     public void WipeIn()
@@ -29,5 +30,10 @@ public class ScreenTransition : MonoBehaviour
     public void WipeOut()
     {
         animator.SetTrigger(RemoveOverlay);
+    }
+
+    public bool IsBlocked()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName("Blocking");
     }
 }
