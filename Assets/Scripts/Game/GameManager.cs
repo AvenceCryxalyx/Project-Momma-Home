@@ -13,6 +13,7 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    public GameSettings GameSettings;
     [SerializeField] private string MainMenuScene = "MainMenu";
     [SerializeField] private string MainSceneName = "MainScene";
     public static GameManager instance;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        GameSettings = Instantiate(GameSettings);
         DontDestroyOnLoad(this);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -34,6 +36,11 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(MainSceneName, LoadSceneMode.Single);
+    }
+
+    public void ResumePlaying()
+    {
+        CurrentState = GameState.Playing;
     }
 
     public void PauseGame()
@@ -58,10 +65,12 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void BackToMainMenu()
+    public void BackToMainMenu(bool reload = true)
     {
         CurrentState = GameState.Uninitialized;
-        SceneManager.LoadScene("MainMenu");
+
+        if(reload)
+            SceneManager.LoadScene("MainMenu");
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)

@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - so: {fileID: 11400000, guid: e67ec7d540b0fba4ea431a72e5d54633, type: 2}
-    amount: 3
+    amount: 2
   - so: {fileID: 11400000, guid: 05edd74f67b7cad429c316831eeafde7, type: 2}
-    amount: 3
+    amount: 1
   - so: {fileID: 11400000, guid: 294744392c9e3b341ace746df0eab2cb, type: 2}
     amount: 2
   - so: {fileID: 11400000, guid: cea48292b2f3d5848b5e52736fc18843, type: 2}
     amount: 2
   - so: {fileID: 11400000, guid: 1f2c288d2015d274e8c25ff6b2457bca, type: 2}
-    amount: 4
+    amount: 3
   - so: {fileID: 11400000, guid: c908360849ecd74418c787084cfb768a, type: 2}
     amount: 4
+  - so: {fileID: 11400000, guid: 223054cb89fbbcb4a9048fca74af463c, type: 2}
+    amount: 1

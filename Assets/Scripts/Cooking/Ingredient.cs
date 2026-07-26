@@ -19,7 +19,6 @@ public class Ingredient : PickupableObject
     private Coroutine ExpiredCor;
     private PickupableObject pickUp;
     private SpriteRenderer spriteRend;
-    private CharacterController characterController;
     private bool isGrounded;
     private bool isExpired;
     //private Animator animator;

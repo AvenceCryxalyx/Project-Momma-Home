@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class OnTheSpotHotpotGameCondition : MonoBehaviour
 {
     [SerializeField] private GameOver GameOverObject;
+
     private void Update()
     {
         if (GameManager.instance == null)
