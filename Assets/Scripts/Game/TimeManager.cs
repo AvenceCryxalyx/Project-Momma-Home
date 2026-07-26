@@ -22,7 +22,7 @@ public class TimeManager : MonoBehaviour
         {
             instance = this;
         }
-
+        TimeRemaining = MaxTimerSeconds;
         TimeFormatted = TimeSpan.FromSeconds(MaxTimerSeconds);
 
     }

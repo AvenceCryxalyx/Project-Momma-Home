@@ -86,11 +86,8 @@ public class RecipeManager : MonoBehaviour
             return;
         if (!CurrentItems.ContainsKey(ingredient.Name))
             return;
-        //if(ingredient.Name == ActiveItem.item.so.Name)
-        //{
-            CurrentItems[ingredient.Name].OnProgress(1);
-        //}
 
+        CurrentItems[ingredient.Name].OnProgress(1);
         IsComplete = CurrentItems.Values.All(x => x.IsDone);
     }
 }

@@ -8,6 +8,8 @@ public class SimpleCutsceneDirector : MonoBehaviour
     public UnityEvent EvtCutsceneDone = new UnityEvent();
     private int currentIndex;
 
+    private bool IsFinished = false;
+
     void Awake()
     {
         currentIndex = 0;
@@ -40,11 +42,19 @@ public class SimpleCutsceneDirector : MonoBehaviour
                 return false;
             }
         }
-
-        if(EvtCutsceneDone != null)
-        {
-            EvtCutsceneDone.Invoke();
-        }
         return true;
+    }
+
+    private void Update()
+    {
+        if(AllDone() && !IsFinished)
+        {
+            IsFinished = true;
+
+            if (EvtCutsceneDone != null)
+            {
+                EvtCutsceneDone.Invoke();
+            }
+        }
     }
 }
