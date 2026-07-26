@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SimpleCutsceneDirector : MonoBehaviour
 {
     [SerializeField]
     private CutsceneObject[] cutsceneObjects;
-
+    public UnityEvent EvtCutsceneDone = new UnityEvent();
     private int currentIndex;
 
     void Awake()
@@ -38,6 +39,11 @@ public class SimpleCutsceneDirector : MonoBehaviour
             {
                 return false;
             }
+        }
+
+        if(EvtCutsceneDone != null)
+        {
+            EvtCutsceneDone.Invoke();
         }
         return true;
     }
