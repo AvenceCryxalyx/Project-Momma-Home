@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Infos:
   - id: Rice
-    weight: 300
+    weight: 20
   - id: Mushroom
-    weight: 100
+    weight: 20
   - id: Lettuce
-    weight: 50
+    weight: 20

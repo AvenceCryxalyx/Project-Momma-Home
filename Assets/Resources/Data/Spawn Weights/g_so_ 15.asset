@@ -18,7 +18,7 @@ MonoBehaviour:
   - id: Mushroom
     weight: 10
   - id: Tofu
-    weight: 10
+    weight: 40
   - id: Meat
     weight: 10
   - id: Lettuce

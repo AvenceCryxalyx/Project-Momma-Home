@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Infos:
   - id: Tofu
-    weight: 100
+    weight: 20
   - id: Meat
     weight: 20
   - id: Egg
-    weight: 500
+    weight: 20

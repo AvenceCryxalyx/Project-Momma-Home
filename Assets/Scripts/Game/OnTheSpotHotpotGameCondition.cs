@@ -13,6 +13,7 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
             GameManager.instance.GameOver();
             GameOverObject.gameObject.SetActive(true);
             GameOverObject.ShowEndScreen(false);
+            GameOverObject.GetComponent<SFXListPlayer>().Play(0);
             GameManager.instance.Player.GetComponent<MovementController>().enabled = false;
             GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = false;
         }
@@ -22,6 +23,7 @@ public class OnTheSpotHotpotGameCondition : MonoBehaviour
             GameManager.instance.GameFinished();
             GameOverObject.gameObject.SetActive(true);
             GameOverObject.ShowEndScreen(true);
+            GameOverObject.GetComponent<SFXListPlayer>().Play(1);
             GameManager.instance.Player.GetComponent<MovementController>().enabled = false;
             GameManager.instance.Player.GetComponentInChildren<LookController>().enabled = false;
         }

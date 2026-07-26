@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -27,9 +28,9 @@ public class GameOver : MonoBehaviour
         GameManager.instance.BackToMainMenu();
     }
 
-    public void Quit()
+    public void PlayAgain()
     {
-        GameManager.instance.ExitGame();
+        SceneManager.LoadScene("MainScene");
     }
 
     public void ShowEndScreen(bool win)

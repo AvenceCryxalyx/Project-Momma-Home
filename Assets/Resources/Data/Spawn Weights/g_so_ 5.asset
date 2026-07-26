@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Infos:
   - id: Rice
-    weight: 300
+    weight: 20
   - id: Tofu
-    weight: 40
+    weight: 20
   - id: Lettuce
-    weight: 100
+    weight: 20
