@@ -202,14 +202,14 @@ MonoBehaviour:
   _evtInteracted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3861834898992057630}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 2487529611503882382}
+        m_TargetAssemblyTypeName: SFXListPlayer, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   groundChecker: {fileID: 1360523244766207172}
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 321
   godrays: {fileID: 966306099022691253}
   wings: {fileID: 3280020645519262166}
 --- !u!135 &8779877666415266449
@@ -271,14 +271,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8684295488590245001}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 5753021172152821071}
+        m_TargetAssemblyTypeName: SFXListPlayer, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5268,6 +5268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6972448695602131348}
   - component: {fileID: 3861834898992057630}
+  - component: {fileID: 2487529611503882382}
   m_Layer: 7
   m_Name: Pickup Voice
   m_TagString: Untagged
@@ -5387,6 +5388,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2487529611503882382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597323154997344349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31605130d1f153147a970c4ef470571f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipList:
+  - {fileID: 8300000, guid: 2751c17d42ae94044871e5ddec8efe17, type: 3}
+  - {fileID: 8300000, guid: 354761c54cab06247bd5b503b5ce4199, type: 3}
+  - {fileID: 8300000, guid: 5ac1d37a12f06f047884efa21f99b0a1, type: 3}
+  - {fileID: 8300000, guid: d5aa8f0b929d2014095a707b3851a86e, type: 3}
 --- !u!1 &8477345854349503681
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,6 +5415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2549028374514324792}
   - component: {fileID: 8684295488590245001}
+  - component: {fileID: 5753021172152821071}
   m_Layer: 7
   m_Name: SpawnVoice
   m_TagString: Untagged
@@ -5516,3 +5535,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5753021172152821071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477345854349503681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31605130d1f153147a970c4ef470571f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipList:
+  - {fileID: 8300000, guid: e3d014e3826271e469bb3ea49b81dca8, type: 3}
+  - {fileID: 8300000, guid: 3a1b67decc2e65a4cbaa5b24261c10aa, type: 3}
