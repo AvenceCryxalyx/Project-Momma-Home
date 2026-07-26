@@ -20,7 +20,7 @@ public class SFXListPlayer : MonoBehaviour
             return;
 
         if (index < 0)
-            index = Random.Range(0, clipList.Count - 1);
+            index = Random.Range(0, clipList.Count);
         audioSource.clip = clipList[index];
         audioSource.Play();
     }
