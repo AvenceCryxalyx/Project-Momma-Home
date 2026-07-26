@@ -98,6 +98,7 @@ public class Ingredient : PickupableObject
         isExpired = true;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
         spriteRend.sprite = so.ExpiredSprite;
         ExpiredCor = StartCoroutine(OnExpiredTask(spawn));
     }
@@ -116,6 +117,7 @@ public class Ingredient : PickupableObject
         ExpiredCor = null;
         gameObject.PoolOrDestroy();
         spriteRend.sprite = so.AliveSprite;
+        rb.isKinematic = false;
     }
 
     private IEnumerator OnExpiredTask(Spawn spawn)
