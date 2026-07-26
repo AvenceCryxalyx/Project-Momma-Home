@@ -17,8 +17,8 @@ MonoBehaviour:
   BaseDirection: {x: 0, y: 1, z: 0}
   BaseForce: 20
   SpawnLaunchParameters:
-    minXOffset: 4
-    maxXOffset: 8
+    minXOffset: 6
+    maxXOffset: 10
     minYOffset: 2
     maxYOffset: 3
     minZOffset: -10

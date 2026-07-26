@@ -88,6 +88,7 @@ public class Ingredient : PickupableObject
 
     public void OnSpawned(Spawn spawn)
     {
+        rb.detectCollisions = true;
         rb.useGravity = true;
         isExpired = false;
     }

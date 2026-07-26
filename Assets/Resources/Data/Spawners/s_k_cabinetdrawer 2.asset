@@ -21,5 +21,5 @@ MonoBehaviour:
     maxXOffset: 4
     minYOffset: 2
     maxYOffset: 3
-    minZOffset: 5
+    minZOffset: 6
     maxZOffset: 10
